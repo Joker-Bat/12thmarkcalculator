@@ -8,14 +8,15 @@ html {
   font-family: sans-serif;
 }
 
-.container {
+.container12th {
+  position: relative;
   padding: 2rem 0;
   max-width: 600px;
   width: 100%;
   margin: auto;
 }
 
-.container .title {
+.container12th .title {
   font-size: 2rem;
   text-align: center;
   font-weight: 500;
@@ -52,21 +53,21 @@ html {
   font-size: 1.2rem;
 }
 
-.container .form {
+.container12th .form__list12th {
   padding: 1rem;
 }
 
-.container .form fieldset {
+.container12th .form__list12th fieldset {
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.container .form fieldset legend {
+.container12th .form__list12th fieldset legend {
   font-size: 1.5rem;
 }
 
-.container .form .submit__btn,
-.container .resultPage .tryagain__btn {
+.container12th .form__list12th .submit__btn,
+.container12th .resultPage .tryagain__btn {
   padding: 0.5rem;
   font-size: 1.1rem;
   cursor: pointer;
@@ -74,38 +75,45 @@ html {
   margin: auto;
 }
 
-.container .resultPage {
+.container12th .resultPage {
+  background: #fff;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: scale(0) translate(-50%, 0);
   padding: 1rem;
   margin: auto;
   width: 90%;
   text-align: center;
   border: 1px solid #000;
-  display: none;
+  transition: transform 1s ease;
+  /* display: none; */
 }
 
-.container .resultPage.show {
+.container12th .resultPage.show {
   display: block;
+  transform: scale(1) translate(-50%, 0);
 }
 
-.container .resultPage h1 {
+.container12th .resultPage h1 {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1rem;
   border-bottom: 1px solid;
 }
 
-.container .resultPage .result__group {
+.container12th .resultPage .result__group {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
 }
 
-.container .resultPage .result__group.total {
+.container12th .resultPage .result__group.total {
   padding-top: 1rem;
   border-top: 1px solid;
 }
 
-.container .resultPage .result__group p:first-child {
+.container12th .resultPage .result__group p:first-child {
   width: 30%;
 }
 

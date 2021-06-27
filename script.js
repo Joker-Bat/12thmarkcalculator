@@ -1,11 +1,11 @@
 // Elements
-const form = document.getElementById("form");
+const form = document.getElementById("formList");
 const tenthMarks = document.querySelectorAll(".tenthmarks");
 const eleventhMarks = document.querySelectorAll(".eleventhmarks");
 const twelfthMarks = document.querySelectorAll(".twelfthmarks");
 const resultPage = document.getElementById("resultPage");
 const tryAgain = document.getElementById("tryAgain");
-const thamizhMark = document.getElementById("thamizhMark"),
+const tamilMark = document.getElementById("tamilMark"),
   englishMark = document.getElementById("englishMark"),
   mathsMark = document.getElementById("mathsMark"),
   physicsMark = document.getElementById("physicsMark"),
@@ -21,13 +21,14 @@ form.addEventListener("submit", (e) => {
   const _11thMarks = get11thMarks();
   const _12thMarks = get12thMarks();
   calculateMarks(_10thMarks, _11thMarks, _12thMarks);
+  window.scrollTo(0, 0);
 });
 
 tryAgain.addEventListener("click", () => {
   tenthMarks.forEach((item) => (item.value = ""));
   eleventhMarks.forEach((item) => (item.value = ""));
   twelfthMarks.forEach((item) => (item.value = 30));
-  thamizhMark.innerText = 0;
+  tamilMark.innerText = 0;
   englishMark.innerText = 0;
   mathsMark.innerText = 0;
   physicsMark.innerText = 0;
@@ -84,7 +85,7 @@ function get12thMarks() {
 function calculateMarks(_10, _11, _12) {
   const { theoryMarksFor20, coreMarksFor20 } = _11;
   // Calculate values
-  const thamizh =
+  const tamil =
     parseInt(_10) + parseInt(theoryMarksFor20[0]) + parseInt(_12[0]);
   const english =
     parseInt(_10) + parseInt(theoryMarksFor20[1]) + parseInt(_12[1]);
@@ -98,14 +99,13 @@ function calculateMarks(_10, _11, _12) {
     parseInt(_10) + parseInt(coreMarksFor20[2]) + parseInt(_12[5]);
 
   // Put values to UI
-  thamizhMark.innerText = thamizh;
+  tamilMark.innerText = tamil;
   englishMark.innerText = english;
   mathsMark.innerText = maths;
   physicsMark.innerText = physics;
   chemistryMark.innerText = chemistry;
   biologyMark.innerText = biology;
-  totalMark.innerText =
-    thamizh + english + maths + physics + chemistry + biology;
+  totalMark.innerText = tamil + english + maths + physics + chemistry + biology;
 }
 
 // Helper functions
