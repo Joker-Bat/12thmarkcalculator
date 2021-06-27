@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 2rem 0;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+
+.container .title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.input__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.input__group label {
+  margin-bottom: 0.5rem;
+}
+
+.input__group .input {
+  display: flex;
+  align-items: center;
+}
+
+.input__group input {
+  width: 80%;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.input__group span {
+  font-size: 1.2rem;
+}
+
+.container .form {
+  padding: 1rem;
+}
+
+.container .form fieldset {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container .form fieldset legend {
+  font-size: 1.5rem;
+}
+
+.container .form .submit__btn,
+.container .resultPage .tryagain__btn {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+.container .resultPage {
+  padding: 1rem;
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  border: 1px solid #000;
+  display: none;
+}
+
+.container .resultPage.show {
+  display: block;
+}
+
+.container .resultPage h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid;
+}
+
+.container .resultPage .result__group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.container .resultPage .result__group.total {
+  padding-top: 1rem;
+  border-top: 1px solid;
+}
+
+.container .resultPage .result__group p:first-child {
+  width: 30%;
+}
+
+footer {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+footer p a {
+  text-decoration: none;
+  font-style: italic;
+}
